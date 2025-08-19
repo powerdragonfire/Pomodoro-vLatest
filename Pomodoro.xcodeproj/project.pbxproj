@@ -43,9 +43,6 @@
 		611D9AA92B2D358C0011F389 /* AppNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F4253D2908E8FD00300C83 /* AppNotifications.swift */; };
 		611D9AAC2B2D97190011F389 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D9AAB2B2D97190011F389 /* Env.swift */; };
 		611D9AAE2B2D97190011F389 /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D9AAB2B2D97190011F389 /* Env.swift */; };
-		611D9AB42B2D987B0011F389 /* Env.plist in Resources */ = {isa = PBXBuildFile; fileRef = 611D9AB32B2D987B0011F389 /* Env.plist */; };
-		611D9AB52B2D987B0011F389 /* Env.plist in Resources */ = {isa = PBXBuildFile; fileRef = 611D9AB32B2D987B0011F389 /* Env.plist */; };
-		611D9AB62B2D987B0011F389 /* Env.plist in Resources */ = {isa = PBXBuildFile; fileRef = 611D9AB32B2D987B0011F389 /* Env.plist */; };
 		611D9AB92B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D9AB82B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift */; };
 		611D9ABB2B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D9AB82B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift */; };
 		611D9ABC2B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611D9AB82B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift */; };
@@ -442,7 +439,6 @@
 		611AE62D2903A9AF00FA24F0 /* ButtonCluster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCluster.swift; sourceTree = "<group>"; };
 		611D9AA42B2D039F0011F389 /* StartStop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartStop.swift; sourceTree = "<group>"; };
 		611D9AAB2B2D97190011F389 /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
-		611D9AB32B2D987B0011F389 /* Env.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Env.plist; sourceTree = "<group>"; };
 		611D9AB72B2DA06E0011F389 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
 		611D9AB82B2DABCE0011F389 /* ScenePhase+CustomStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScenePhase+CustomStringConvertible.swift"; sourceTree = "<group>"; };
 		611EE30C2A107CD000DDF171 /* View+doneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+doneButton.swift"; sourceTree = "<group>"; };
@@ -694,7 +690,6 @@
 		610515B12AD4999D00F6DD30 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				611D9AB32B2D987B0011F389 /* Env.plist */,
 				611D9AAB2B2D97190011F389 /* Env.swift */,
 				610515B22AD499A900F6DD30 /* Views */,
 				610515B52AD49B7300F6DD30 /* Model */,
@@ -1341,7 +1336,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					612D8F7E290B63180089CDD1 = {
 						CreatedOnToolsVersion = 14.1;
@@ -1414,7 +1409,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611D9AB62B2D987B0011F389 /* Env.plist in Resources */,
 				6172B4C6297F65EF00E53D8F /* Assets.xcassets in Resources */,
 				6172B4B6297F5EC700E53D8F /* Assets.xcassets in Resources */,
 			);
@@ -1424,7 +1418,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611D9AB42B2D987B0011F389 /* Env.plist in Resources */,
 				617789BA2856A1F300BD43D7 /* Preview Assets.xcassets in Resources */,
 				617789B62856A1F300BD43D7 /* Assets.xcassets in Resources */,
 			);
@@ -1441,7 +1434,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				611D9AB52B2D987B0011F389 /* Env.plist in Resources */,
 				61E734A62B23E88A001C5B2A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1883,7 +1875,6 @@
 				CODE_SIGN_ENTITLEMENTS = WatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchWidget;
@@ -1915,7 +1906,6 @@
 				CODE_SIGN_ENTITLEMENTS = WatchWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WatchWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchWidget;
@@ -1949,7 +1939,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = iOSWidget;
@@ -1984,7 +1973,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = iOSWidget;
@@ -2046,6 +2034,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -2107,6 +2096,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -2136,7 +2126,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Pomodoro/Preview Content\"";
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2180,7 +2169,6 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Pomodoro/Preview Content\"";
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2220,7 +2208,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -2244,7 +2231,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -2267,7 +2253,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -2290,7 +2275,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
@@ -2317,7 +2301,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PomodoroWatch-Watch-App-Info.plist";
@@ -2351,7 +2334,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PomodoroWatch-Watch-App-Info.plist";
@@ -2383,7 +2365,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.po-gl-a.PomodoroTests.watchkitapp";
@@ -2404,7 +2385,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.po-gl-a.PomodoroTests.watchkitapp";
@@ -2425,7 +2405,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.po-gl-a.PomodoroUITests.watchkitapp";
@@ -2445,7 +2424,6 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B5RQ2EJVKL;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.po-gl-a.PomodoroUITests.watchkitapp";
