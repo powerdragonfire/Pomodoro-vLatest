@@ -1,5 +1,23 @@
-# Pomodoro
-A iOS and watchOS focus timer app
+# Pomodoro-vLatest (Fork of Pomodora)
+
+This is a fork of [po-gl/Pomodoro](https://github.com/po-gl/Pomodoro).
+
+## License
+This project is licensed under the terms of the [GNU GPL v3.0](LICENSE).  
+You are free to use, modify, and distribute this software under the same license.
+
+## Credits
+Original project: https://github.com/po-gl/Pomodoro
+
+
+## Changes
+* 2025-08-19: Updated Development Team / Apple Team to local
+* 2025-08-19: Updated README to credit source and retain GPL-3.0 compliance
+
+## Credits
+Original project: https://github.com/powerdragonfire/Pomodoro-vLatest
+
+# A iOS and watchOS focus timer app
 
 You can download the app via TestFlight using this link: https://testflight.apple.com/join/nkvdy1Ij
 
