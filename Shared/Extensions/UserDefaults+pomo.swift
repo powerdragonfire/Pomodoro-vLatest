@@ -9,6 +9,6 @@ import Foundation
 
 extension UserDefaults {
     static var pomo: UserDefaults? {
-        UserDefaults(suiteName: "group.com.po-gl-a.pomodoro")
+        UserDefaults(suiteName: "group.com.ganydora.app")
     }
 }
