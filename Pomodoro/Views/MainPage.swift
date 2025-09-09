@@ -21,10 +21,6 @@ struct MainPage: View {
             Background(pickOffset: dragOffset, metalPickOffset: metalDragOffset)
                 .animation(.default, value: pomoTimer.isPaused)
 
-            TaskAdderView(taskFromAdder: $taskFromAdder)
-                .zIndex(1)
-                .verticalOffsetEffect(for: dragOffset, .spring, factor: 0.3)
-
             mainStack
         }
         .animation(.easeInOut(duration: 0.3), value: pomoTimer.isPaused)
@@ -41,7 +37,9 @@ struct MainPage: View {
                     .padding(.top, isSmallDevice ? 5 : 30)
                     .verticalOffsetEffect(for: dragOffset, .spring, factor: 0.15)
 
-                Color.clear.contentShape(Rectangle())
+                Color.clear
+                    .frame(height: 290) // or width if horizontal
+                    .contentShape(Rectangle())
                     .verticalDragGesture(offset: $dragOffset,
                                          metalOffset:$metalDragOffset,
                                          clampedTo: -20..<120,

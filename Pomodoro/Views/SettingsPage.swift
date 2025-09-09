@@ -9,20 +9,20 @@ import SwiftUI
 
 
 struct SettingsPage: View {
-    @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var pomoTimer: PomoTimer
+    @Environment(\.colorScheme) private var colorScheme
+    @EnvironmentObject private var pomoTimer: PomoTimer
 
-    @AppStorage("workDuration", store: UserDefaults.pomo) var workDuration: TimeInterval = PomoTimer.defaultWorkTime
-    @AppStorage("restDuration", store: UserDefaults.pomo) var restDuration: TimeInterval = PomoTimer.defaultRestTime
-    @AppStorage("breakDuration", store: UserDefaults.pomo) var breakDuration: TimeInterval = PomoTimer.defaultBreakTime
-    
-    @StateObject var buddySelection = BuddySelection.shared
-    @AppStorage("enableBuddies", store: UserDefaults.pomo) var enableBuddies = true
+    @AppStorage("workDuration", store: UserDefaults.pomo) private var workDuration: TimeInterval = PomoTimer.defaultWorkTime
+    @AppStorage("restDuration", store: UserDefaults.pomo) private var restDuration: TimeInterval = PomoTimer.defaultRestTime
+    @AppStorage("breakDuration", store: UserDefaults.pomo) private var breakDuration: TimeInterval = PomoTimer.defaultBreakTime
 
-    @State var showWelcomeMessage = false
+    @StateObject private var buddySelection = BuddySelection.shared
+    @AppStorage("enableBuddies", store: UserDefaults.pomo) private var enableBuddies = true
 
-    @State var draggableTaskStub = DraggableTask()
-    let durationChangeAnim: Animation = .interpolatingSpring(stiffness: 190, damping: 13)
+    @State private var showWelcomeMessage = false
+
+    @State private var draggableTaskStub = DraggableTask()
+    private let durationChangeAnim: Animation = .interpolatingSpring(stiffness: 190, damping: 13)
 
     init() {
         let titleFont = UIFont.preferredFont(forTextStyle: .body).asBoldRounded()
@@ -64,18 +64,7 @@ struct SettingsPage: View {
                     .backgroundStyle(GroupBoxBackgroundStyle())
                     HStack {
                         Spacer()
-                        Button(action: {
-                            resetHaptic()
-                            withAnimation {
-                                workDuration = PomoTimer.defaultWorkTime
-                                restDuration = PomoTimer.defaultRestTime
-                                breakDuration = PomoTimer.defaultBreakTime
-                                pomoTimer.reset(pomos: pomoTimer.pomoCount,
-                                                work: workDuration,
-                                                rest: restDuration,
-                                                longBreak: breakDuration)
-                            }
-                        }) {
+                        Button(action: resetToDefaults) {
                             Text("Reset to default settings")
                                 .font(.callout)
                         }
@@ -87,16 +76,12 @@ struct SettingsPage: View {
                         .padding(.vertical, 5)
 
                     GroupBox {
+                        Text("Select Your Buddies")
                         buddySelectors
-                        Divider()
-                            .padding(.vertical, 5)
-                        Toggle(isOn: $enableBuddies, label: {
-                            Text("Pixel Buddies")
-                        })
                         .accessibilityIdentifier("buddyToggle")
                         .tint(.end)
                     }
-                    .backgroundStyle(GroupBoxBackgroundStyle())
+//                    .backgroundStyle(GroupBoxBackgroundStyle())
 
                     Divider()
                         .padding(.vertical, 5)
@@ -105,7 +90,7 @@ struct SettingsPage: View {
                         Button(action: {
                             showWelcomeMessage = true
                         }) {
-                            Text("Show Welcome Message")
+                            Text("Tutorial")
                         }
                         .frame(maxWidth: .infinity)
                     }
@@ -132,20 +117,20 @@ struct SettingsPage: View {
         }
     }
 
-    @ViewBuilder var buddySelectors: some View {
+    @ViewBuilder private var buddySelectors: some View {
         HStack {
             Spacer()
             buddySelectorWithAction(.tomato)
-            Spacer()
-            buddySelectorWithAction(.blueberry)
-            Spacer()
-            buddySelectorWithAction(.banana)
+//            Spacer()
+//            buddySelectorWithAction(.blueberry)
+//            Spacer()
+//            buddySelectorWithAction(.banana)
             Spacer()
         }
     }
 
     @ViewBuilder
-    func buddySelectorWithAction(_ buddy: Buddy) -> some View {
+    private func buddySelectorWithAction(_ buddy: Buddy) -> some View {
         BuddySelector(buddy: buddy, isSelected: buddySelection.selection[buddy, default: false])
         .saturation(enableBuddies ? 1.0 : 0.3)
         .onTapGesture {
@@ -158,7 +143,7 @@ struct SettingsPage: View {
     }
 
     @ViewBuilder
-    func durationSlider(_ text: String,
+    private func durationSlider(_ text: String,
                         _ status: PomoStatus,
                         value: Binding<TimeInterval>,
                         in range: ClosedRange<TimeInterval>) -> some View {
@@ -182,6 +167,20 @@ struct SettingsPage: View {
         })
         .labelStyle(.titleAndIcon)
         .accessibilityIdentifier("durationSlider\(status.rawValue.capitalized)")
+    }
+
+    // MARK: - Actions
+    private func resetToDefaults() {
+        resetHaptic()
+        withAnimation {
+            workDuration = PomoTimer.defaultWorkTime
+            restDuration = PomoTimer.defaultRestTime
+            breakDuration = PomoTimer.defaultBreakTime
+            pomoTimer.reset(pomos: pomoTimer.pomoCount,
+                            work: workDuration,
+                            rest: restDuration,
+                            longBreak: breakDuration)
+        }
     }
 }
 
