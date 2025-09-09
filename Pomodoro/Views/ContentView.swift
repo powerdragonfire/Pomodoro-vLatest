@@ -28,7 +28,7 @@ struct ContentView: View {
             TaskList()
                 .toasts(bottomPadding: 50)
                 .tabItem {
-                    Label { Text("Tasks") } icon: { Image(.pomoChecklist) }
+                    Label { Text("Projects") } icon: { Image(.pomoChecklist) }
                         .accessibilityIdentifier("taskList")
                 }
                 .tag(1)
@@ -36,7 +36,7 @@ struct ContentView: View {
             ChartsPage()
                 .toasts()
                 .tabItem {
-                    Label { Text("Charts") } icon: { Image(.pomoChart) }
+                    Label { Text("Results") } icon: { Image(.pomoChart) }
                         .accessibilityIdentifier("chartsPage")
                 }
                 .tag(2)
